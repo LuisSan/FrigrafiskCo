@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Jenny Fahlgrens illustrationer och konst</title>
+	
+	<link rel="stylesheet" href="CSS/global.css">
+	<script src="Scripts/jquery.min.js"></script>
+	<script src="Scripts/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						bottom:0
+					},200);
+				}
+			});
+		});
+	</script>
+    <script>
+            document.onmousedown = function($e)
+            {
+                ($e || ($e = window.event));
+
+                if (
+                    $e.target &&
+                    $e.target.nodeName != 'A' &&
+                    $e.target.parentNode.nodeName != 'A'
+
+                    ||
+
+                    $e.srcElement &&
+                    $e.srcElement.nodeName != 'A' &&
+                    $e.srcElement.parentNode.nodeName != 'A'
+                ) {
+                    location.href = '#';
+                }
+            }
+        </script>  
+</head>
+<body>
+
+			<div id="header">
+            <div id="logotext"><br><span class="intro"><h1>Jenny Fahlgren</h1></span></div>
+            
+          	
+
+<div class='menu' id='menu'><div>
+                            <ul class='menu'>
+                                <li class='menu' id='menu-0'>
+                                    <a href='http://www.jennyfahlgren.com'><span>Startsida</span></a><span class='arrow'></span>
+                                    <div class='menu'></div>
+                                </li>
+                                <li><a href='http://lailustradora.wordpress.com'><span>Blogg</span></a></li>
+                                <li class='menu' id='menu-1'>
+                                    <a href='http://www.jennyfahlgren.com/galleri.html'><span>Galleri</span></a><span class='arrow'></span>
+                                    <div class='menu'><div>
+                                    <ul>
+                                       <li>
+                                            <a href='http://lailustradora.wordpress.com/category/till-salu/'>
+                                                <span>Till salu</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href='http://bugzilla.mozilla.org'>
+                                                <span>Konst</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='http://bugzilla.mozilla.org'>
+                                                <span>Blandat</span>
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                    </div></div>
+                                </li>
+                                <!--<li class='menu' id='menu-2'>
+                                    <a href='#menu-2'><span>Shop</span></a><span class='arrow'></span>
+                                    <div class='menu'><div>
+                                    <ul>
+                                       <li>
+                                            <a href='http://webkit.opendarwin.org'>
+                                                <span>Prints</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='http://webkit.opendarwin.org/blog/'>
+                                                <span>Konst</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                        </div></div>-->
+                                </li>
+                                <li class='menu' id='menu-3'>
+                                    <a href='http://www.jennyfahlgren.com/about.html'><span>Om mig</span></a><span class='arrow'></span>
+                                    <div class='menu'><div>
+                                    
+                                    </div></div>
+                                </li>
+                              
+                                    </ul>
+                                    </div></div>
+                                </li>
+                            </ul>
+    </div></div>
+
+	<div id="container">
+    <div id="textBody"> 
+    <br><span class="intro">Aktuellt</span>
+        <p>Illustration till rubriken tjuvlyssnat i nummer fyra av Sergio Magazine. Ute 1/10 i Gävle.
+</p> 
+<div id="example">
+                <img src="img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon">
+              <div id="slides">
+                    <div class="slides_container">
+                    
+                        <div class="slide">
+                            <img src="img/1.png" width="350" height="440" alt="Slide 2" align="middle"></a>
+                            <div class="caption" style="bottom:0">
+                                <p>Sergio Magazine 1</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="img/2.png" width="350" height="495" alt="Slide 1"></a>
+                            <div class="caption" style="bottom:0">
+                                <p>Sergio Magazine 2</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="img/3.png" width="350" height="467" alt="Slide 2"></a>
+                            <div class="caption">
+                                <p>Sergio Magazine 3</p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                  <a href="#" class="prev"><img src="img/arrow-prev.png" width="24" height="43" alt="Arrow Prev" border="none"></a>
+                  <a href="#" class="next"><img src="img/arrow-next.png" width="24" height="43" alt="Arrow Next" border="none"></a>			</div>
+                <img src="img/example-frame.png" width="739" height="700" alt="Example Frame" id="frame">		</div>
+		</div>
+	</div>
+</body>
+</html>
